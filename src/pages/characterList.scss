@@ -1,0 +1,18 @@
+.character-container {
+  display: flex;
+  // justify-content: space-between;
+  .character-cards {
+    width: 80%;
+    .title {
+      font-size: 3rem;
+    }
+  }
+  .character-details {
+    background-color: rgb(116, 155, 93);
+    width: 20%;
+    li {
+      list-style: none;
+      padding-bottom: 10px;
+    }
+  }
+}

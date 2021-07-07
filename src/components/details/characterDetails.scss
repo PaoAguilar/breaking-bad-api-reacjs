@@ -1,0 +1,18 @@
+.details-container {
+  position: fixed;
+  min-height: 120px;
+  width: 20%;
+  text-align: center;
+  word-wrap: break-word;
+  .title {
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 3rem;
+  }
+  .char-info {
+    font-size: 1.5rem;
+    color: rgb(205, 224, 206);
+  }
+}

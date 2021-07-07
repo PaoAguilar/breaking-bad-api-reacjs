@@ -1,37 +1,29 @@
-import React, { Component } from 'react';
-import { getBreackingBadCharacters } from '../api/breakingBadApi';
-import CharacterItem from '../components/CharacterItem';
+import React, { Component } from "react";
+import CharacterItem from "../components/CharacterItem";
+import CharacterDetails from "../components/details/CharacterDetails";
+import { CharacterContext } from "../context/CharacterProvider";
+import "./characterList.scss";
 class CharacterList extends Component {
-  state = {
-    characters: [],
-    isLoading: true,
-  };
-
-  componentDidMount() {
-    getBreackingBadCharacters()
-      .then((res) => {
-        console.log(res);
-        this.setState({ characters: res.data });
-        this.setState({ isLoading: false });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
-
+  static contextType = CharacterContext;
   render() {
-    const { characters, isLoading } = this.state;
     return (
       <div>
-        <h1 className='title'>BREAKING BAD CHARACTERS</h1>
-        <div className='cards'>
-          {characters.map((character) => {
-            return (
-              <div key={character.char_id}>
-                <CharacterItem character={character} isLoading={isLoading} />
-              </div>
-            );
-          })}
+        <div className="character-container">
+          <div className="character-cards">
+            <h1 className="title">BREAKING BAD CHARACTERS</h1>
+            <div className="cards">
+              {this.context.state.characters.map((character) => {
+                return (
+                  <div key={character.char_id}>
+                    <CharacterItem character={character} />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          <div className="character-details">
+            <CharacterDetails />
+          </div>
         </div>
       </div>
     );

@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Header extends Component {
   render() {
     return (
-      <div className='btn-options'>
-        <div className='btn-container'>
-          <Link to='/character' className='btn-character'>
+      <div className="btn-options">
+        <div className="btn-container">
+          <Link to="/character" className="btn-character">
             Characters
           </Link>
-          <Link to='/character' className='btn-character'>
+          <Link to="/character" className="btn-character">
             Episodes
           </Link>
         </div>
