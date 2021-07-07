@@ -19,19 +19,37 @@ class CharacterDetails extends Component {
         ) : (
           <div>
             <h2 className="title">DETAILS</h2>
+            <h3>"{character?.name}"</h3>
             {character ? (
               <ul className="char-info">
                 <li>
-                  <strong>Actor Name: {character?.name}</strong>
+                  <strong>
+                    <span>Actor Name: </span> {character?.portrayed}
+                  </strong>
                 </li>
                 <li>
-                  <strong>Nickname: {character?.nickname}</strong>
+                  <strong>
+                    <span>Nickname: </span>
+                    {character?.nickname}
+                  </strong>
                 </li>
                 <li>
-                  <strong>Birthday: {character?.birthday}</strong>
+                  <strong>
+                    <span>Birthday: </span>
+                    {character?.birthday}
+                  </strong>
                 </li>
                 <li>
-                  <strong>Status: {character?.status}</strong>
+                  <strong>
+                    <span>Occupation: </span>
+                    {character?.occupation}
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>Status:</span>
+                    {character?.status}
+                  </strong>
                 </li>
               </ul>
             ) : null}

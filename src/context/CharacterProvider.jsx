@@ -29,7 +29,6 @@ class CharacterProvider extends Component {
   }
 
   selectedCharacter = (selected) => {
-    console.log("selectedcjar");
     this.setState({ character: selected });
   };
 

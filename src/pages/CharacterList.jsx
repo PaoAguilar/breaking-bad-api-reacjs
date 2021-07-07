@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import CharacterItem from "../components/CharacterItem";
-import CharacterDetails from "../components/details/CharacterDetails";
+import CharacterItem from "../components/characterItem/CharacterItem";
+import CharacterDetails from "../components/characterDetails/CharacterDetails";
 import { CharacterContext } from "../context/CharacterProvider";
 import "./characterList.scss";
 class CharacterList extends Component {

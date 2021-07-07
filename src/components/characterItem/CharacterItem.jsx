@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./characterItem.scss";
-import "./commons/layout.scss";
-import { CharacterContext } from "../context/CharacterProvider";
+import "../commons/layout.scss";
+import { CharacterContext } from "../../context/CharacterProvider";
 
 class CharacterItem extends Component {
   static contextType = CharacterContext;
@@ -22,7 +22,7 @@ class CharacterItem extends Component {
               }}
               className="btn-see-more"
             >
-              See more
+              See details
             </button>
           </div>
         </div>
