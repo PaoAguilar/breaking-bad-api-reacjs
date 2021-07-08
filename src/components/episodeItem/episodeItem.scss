@@ -1,0 +1,17 @@
+.card-episode {
+  cursor: pointer;
+  background-color: transparent;
+  height: 11rem;
+  perspective: 800px;
+  position: relative;
+  width: 20rem;
+  margin-bottom: 1rem;
+  position: relative;
+  h2 {
+    color: bisque;
+  }
+  h4 {
+    position: absolute;
+    bottom: 2rem;
+  }
+}

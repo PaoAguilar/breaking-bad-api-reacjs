@@ -7,6 +7,25 @@ class CharacterDetails extends Component {
   state = {
     isLoading: true,
   };
+  
+  componentDidMount(){
+    for (const elem of document.getElementsByClassName("btn-character")) {
+      elem.addEventListener('mouseover', this.changeColor);
+    }
+  }
+  
+  componentWillUnmount() {
+    for (const elem of document.getElementsByClassName("btn-character")) {
+      elem.removeEventListener('mouseover', this.changeColor);
+    }
+  }
+
+  changeColor = (event) => {
+    event.target.style.backgroundColor="orange"
+    setTimeout(function() {
+      event.target.style.backgroundColor = "";
+    }, 500)
+  };
 
   render() {
     const { isLoading, character } = this.context.state;
@@ -19,39 +38,41 @@ class CharacterDetails extends Component {
         ) : (
           <div>
             <h2 className="title">DETAILS</h2>
-            <h3>"{character?.name}"</h3>
             {character ? (
-              <ul className="char-info">
-                <li>
-                  <strong>
-                    <span>Actor Name: </span> {character?.portrayed}
-                  </strong>
-                </li>
-                <li>
-                  <strong>
-                    <span>Nickname: </span>
-                    {character?.nickname}
-                  </strong>
-                </li>
-                <li>
-                  <strong>
-                    <span>Birthday: </span>
-                    {character?.birthday}
-                  </strong>
-                </li>
-                <li>
-                  <strong>
-                    <span>Occupation: </span>
-                    {character?.occupation}
-                  </strong>
-                </li>
-                <li>
-                  <strong>
-                    <span>Status:</span>
-                    {character?.status}
-                  </strong>
-                </li>
-              </ul>
+              <>
+                <h3>"{character?.name}"</h3>
+                <ul className="char-info">
+                  <li>
+                    <strong>
+                      <span>Actor Name: </span> {character?.portrayed}
+                    </strong>
+                  </li>
+                  <li>
+                    <strong>
+                      <span>Nickname: </span>
+                      {character?.nickname}
+                    </strong>
+                  </li>
+                  <li>
+                    <strong>
+                      <span>Birthday: </span>
+                      {character?.birthday}
+                    </strong>
+                  </li>
+                  <li>
+                    <strong>
+                      <span>Occupation: </span>
+                      {character?.occupation}
+                    </strong>
+                  </li>
+                  <li>
+                    <strong>
+                      <span>Status:</span>
+                      {character?.status}
+                    </strong>
+                  </li>
+                </ul>
+              </>
             ) : null}
           </div>
         )}

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import CharacterItem from "../components/characterItem/CharacterItem";
-import CharacterDetails from "../components/characterDetails/CharacterDetails";
-import { CharacterContext } from "../context/CharacterProvider";
+import CharacterItem from "../../components/characterItem/CharacterItem";
+import CharacterDetails from "../../components/characterDetails/CharacterDetails";
+import { CharacterContext } from "../../context/CharacterProvider";
 import "./characterList.scss";
 class CharacterList extends Component {
   static contextType = CharacterContext;

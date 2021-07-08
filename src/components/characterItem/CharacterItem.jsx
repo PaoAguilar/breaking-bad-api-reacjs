@@ -5,6 +5,7 @@ import { CharacterContext } from "../../context/CharacterProvider";
 
 class CharacterItem extends Component {
   static contextType = CharacterContext;
+
   render() {
     const { character } = this.props;
     return (

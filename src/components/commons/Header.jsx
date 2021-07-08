@@ -9,7 +9,7 @@ class Header extends Component {
           <Link to="/character" className="btn-character">
             Characters
           </Link>
-          <Link to="/character" className="btn-character">
+          <Link to="/episode" className="btn-character">
             Episodes
           </Link>
         </div>
